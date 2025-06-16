@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Bookstore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: green;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    header img {
+        float: left;
+    }
+    nav {
+      margin: 10px 0;
+      color: red;
+      text-align: center;
+    }
+    nav a {
+      margin:35px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .book {
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    .book img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .book h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+    .book p {
+      font-size: 14px;
+      color: #555;
+    }
+    .book button {
+      background-color: #27ae60;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #2c3e50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+  .search-bar button {
+    padding: 8px 12px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://images.squarespace-cdn.com/content/v1/5e7275120157e10f58ad3274/a85f6bc5-0992-44f9-b2b2-1d2d5a17fbd8/Back+To+School+Sale+Round-Up+%282%29.jpg">
+    <h1>Welcome to Online Bookstore</h1>
+  </header>  <nav>
+    <a href="website3.html">Home</a>
+    <a href="TeluguBooks.html">TeluguBooks</a>
+    <a href="EnglishBooks.html">EnglishBooks</a>
+    <a href="HindiBooks.html">HindiBooks</a>
+    <a href="MalayalamBooks.html">MalayalamBooks</a>
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+    <a href="checkout.html">Checkout</a>
+    <div class="search-bar">
+       <input type="text" id="searchInput" placeholder="Search books..." />
+       <button onclick="searchBooks()">🔍</button>
+    </div>
+  </nav>  <div class="container">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51oJdLkN8PL._SY425_.jpg">
+      <h3>Mahaprasthanam</h3>
+      <p>Sri Sri Srirangam Srinivasrao</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51kcvsUE+uL._SY445_SX342_.jpg">
+      <h3>Kanyasulkan</h3>
+      <p>Gurajada Apparao</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81nmoaZPZRL._AC_UF1000,1000_QL80_DpWeblab_.jpg">
+      <h3>Veyi Padagalu</h3>
+      <p>Viswanatha Satyanarayana</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYcHk1mQPXGbNRPxVR-RC3eqMTrSQzEe_AA&s">
+      <h3>Amuktamalyada</h3>
+      <p>Sri Krishnadevaraya</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3107E4ufxDgx8ypNTpio3EMx9OEzKoyvO5w&s">
+      <h3>Budugu</h3>
+      <p>Mullapudi Venkata Ramana</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeEklxzauBQX0JqFN3-LOZH0WbCJS1zlzrjg&s">
+      <h3>Chitti Chilakamma Kathalu</h3>
+      <p>Bapu-Ramana</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt5Fw1rbUTYPofsDxo0m7Z6uKAaBNJjL6iaA&s">
+      <h3>Ramayanam</h3>
+      <p>Valmiki</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1322420506i/13117833.jpg">
+      <h3>Maidanam</h3>
+      <p>Gudipati Venkatachalam</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5aQUmiyXQR13ON0HAPChm8XMwUjj2Q7IOJA&s">
+      <h3>Varnachitram</h3>
+      <p>Malladi Venkata Krishna Murthy</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAbs8pc2J-OK20wmXJg-7X9J0MAchqMmHww&s">
+      <h3>Mahabharata</h3>
+      <p>Ved Vyasa</p>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2021/12/SO/OO/JO/12594548/front-cover-300.jpg">
+      <h3>An Untold Epic Of Ayyappan</h3>
+      <p>Vinod Narayanan</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmF8oL283FW4GiFYvP5TDcCYfF4h7NFjIFJg&s">
+      <h3>Bhagavad Gita</h3>
+      <p>Ved Vyasa</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+  </div> 
+  <div class="container">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81qWQWIk-8L._AC_UF1000,1000_QL80_.jpg">
+      <h3>The Jungle Book</h3>
+      <p>Rudyard Kipling</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0s41e1unhAFHODzBp5cx7a0zFAZhABt8PNA&s">
+      <h3>Charlotte's Web</h3>
+      <p>E.B.White</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBJL9AuXImogsdpJcICkSh2yqL7UrJVkniUQ&s">
+      <h3>The Blue Umbrella</h3>
+      <p>Ruskin Bond</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-sYfRsQ6O-Y2fb2JSzSGzIwgKHDQI3-KIhg&s">
+      <h3>Charlie and the Chocolate Factory</h3>
+      <p>Roald Dahl</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSbXfh_DHUqW2XINKBUdlX3shU3cixJ4ymbQ&s">
+      <h3>The Adventures of Tom Sawyer</h3>
+      <p>Mark Twain</p>
+      <p>₹2149</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/71Uj9TYDQXL._UF1000,1000_QL80_.jpg">
+      <h3>Alice's Adventures in Wonderland</h3>
+      <p>Lewis Carroll</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81X10Vfn8CL._AC_UF1000,1000_QL80_.jpg">
+      <h3>The Lion, the Witch and the Wardrobe</h3>
+      <p>C.S.Lewis</p>
+      <p>₹1499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81q77Q39nEL._UF1000,1000_QL80_DpWeblab_.jpg">
+      <h3>Harry Potter and the Philosopher's Stone</h3>
+      <p>J.K.Rowling</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://rukminim2.flixcart.com/image/750/900/ki4w0i80-0/book/x/v/z/malgudi-days-original-imafyy3gpcytcewp.jpeg?q=90&crop=false">
+      <h3>Malgudi Days</h3>
+      <p>R.K.Narayan</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pseU80-ewbCR5rlIFJuoIOcy1gai92fo_Q&s">
+      <h3>Grandma's Bag of Stories</h3>
+      <p>Sudha Murty</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TJvRmH3lmv67cq0NnjsUPLXLOCgM1QWgxw&s">
+      <h3>The Magic Drum and Other Stories</h3>
+      <p>Sudha Murty</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZflFVqxeEtPVslPMvLFYWWU_BKE9F3VvVHw&s">
+      <h3>Matilda</h3>
+      <p>Roald Dahl</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+    <div class="container">
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jo8sqXvplMGfUMqnjPiF8q7b1Y_QFAyISA&s">
+      <h3>Godaan</h3>
+      <p>Munshi Premchand</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hMVX0zVXt_OsHM6iuYV_UTC1PWe2UOtCTQ&s">
+      <h3>Kamayani</h3>
+      <p>Jaishankar Prasad</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTema8Yas1XneNpZkPkwpjNarD1b8yVc6Ex0g&s">
+      <h3>Madhushala</h3>
+      <p>Harivansh Rai Bachchan</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://www.thecivilindia.com/wp-content/uploads/2025/03/pusp_ki_abhilasa_civilindia.webp">
+      <h3>Pushp Ki Abhilasha</h3>
+      <p>Makhanlal Chaturvedi</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://cdn.exoticindia.com/images/products/original/books-2019-015/nzq210.jpg">
+      <h3>Saket</h3>
+      <p>Maithili Sharan Gupt</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81bmDNG9euS.jpg">
+      <h3>Bharat Durdasha</h3>
+      <p>Bhartendu Harishchandra</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/71-inovjD0L.jpg">
+      <h3>Chitralekha</h3>
+      <p>Bhagwati Charan Verma</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://rekhtabooks.com/cdn/shop/products/1674120057.jpg?v=1685778693">
+      <h3>75 Kavitayen</h3>
+      <p>Subhadra Kumari Chauhan</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51NCT4%2BpKIL._AC_SY200_QL15_.jpg">
+      <h3>Suraj Ka Satvan Ghoda</h3>
+      <p>Dharamvir Bharati</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/813GkVYIXcL.jpg">
+      <h3>Gunahon ka Devta</h3>
+      <p>Dharamvir Bharati</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/91GdrnoqIqL.jpg">
+      <h3>Aadha Gaon</h3>
+      <p>Rahi Masoom Raza</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/21mWBt9n5yL._AC_UF1000,1000_QL80_.jpg">
+      <h3>Tamrapatra</h3>
+      <p>Vishnu Prabhakar</p>
+      <p>₹999</p>
+      <button >Add to Cart</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/41iIliS0lqL._AC_UF1000,1000_QL80_.jpg">
+      <h3>Kunjan Nambiar</h3>
+      <p>Kilippattu Raman</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1359824726i/17314866.jpg">
+      <h3>Indulekha</h3>
+      <p>O. Chandu Menon</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/af/Randamoozham_30th_edition_cover.jpg">
+      <h3>Randamoozham / Second Turn</h3>
+      <p>M.T. Vasudevan Nair</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/book/0/f/y/pathonpatham-noottandu-original-imagk4fhtr2zpkzy.jpeg?q=90&crop=false">
+      <h3>Pathinaram Noottaandu</h3>
+      <p>M. Mukundan</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/71qxgcl7MWL._AC_UF1000,1000_QL80_.jpg">
+      <h3>Varthamanam</h3>
+      <p>P. Sachidanandan</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/M/MV5BYjI4ZTFlYTctYmVkMC00NzIyLWEyNWMtM2ZiOWJiMDEzZjUyXkEyXkFqcGc@._V1_.jpg">
+      <h3>Arabikatha</h3>
+      <p>Benyamin</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51X0ET20iSL._UF1000,1000_QL80_.jpg">
+      <h3>Sugandhi Enikku...</h3>
+      <p>C.V. Balakrishnan</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/61tBpjaaxjL._UF1000,1000_QL80_.jpg">
+      <h3>Naalukettu</h3>
+      <p>M.T. Vasudevan Nair</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://rukminim3.flixcart.com/image/850/1000/kasjjww0/regionalbooks/t/y/g/agnisakshi-original-imafs9zz6pbvtxzu.jpeg?q=90&crop=false">
+      <h3>Agnisakshi</h3>
+      <p>Lalithambika Antharjanam</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT745hxRsl25hyAt8Hj9QrHLgJgfZObkPOSiQ&s">
+      <h3>Kodiyeri Aniyan</h3>
+      <p>Thakazhi Sivasankara Pillai</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/61kOIsEGxVL.jpg">
+      <h3>Thrissur Pooram</h3>
+      <p>Kalappurakkal Narayanan</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://d1af37c1pl2nfl.cloudfront.net/images/books/cpt/front/alappuzha-samarapatha.jpg">
+      <h3>Alappuzha Kathakal</h3>
+      <p>Kakkattil Kunjiraman</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+  </div> 
+  <script>
+    function searchBooks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const books = document.querySelectorAll('.book');
+
+      books.forEach(book => {
+        const title = book.querySelector('h3').textContent.toLowerCase();
+        const author = book.querySelector('p').textContent.toLowerCase();
+
+        if (title.includes(input) || author.includes(input)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    }
+  </script>
+   <footer>
+  </footer>
+</body>
+</html>
