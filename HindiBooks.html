@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Bookstore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: green;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    header img {
+        float: left;
+    }
+    nav {
+      margin: 10px 0;
+      color: red;
+      text-align: center;
+    }
+    nav a {
+      margin:35px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .book {
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    .book img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .book h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+    .book p {
+      font-size: 14px;
+      color: #555;
+    }
+    .book button {
+      background-color: #27ae60;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #2c3e50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+  .search-bar button {
+    padding: 8px 12px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="">
+    <h1>Welcome to Online Bookstore</h1>
+  </header>  <nav>
+    <a href="website3.html">Home</a>
+    <a href="TeluguBooks.html">TeluguBooks</a>
+    <a href="EnglishBooks.html">EnglishBooks</a>
+    <a href="HindiBooks.html">HindiBooks</a>
+    <a href="MalayalamBooks.html">MalayalamBooks</a>
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+    <a href="checkout.html">Checkout</a>
+    <div class="search-bar">
+       <input type="text" id="searchInput" placeholder="Search books..." />
+       <button onclick="searchBooks()">🔍</button>
+    </div>
+  </nav>  <div class="container">
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jo8sqXvplMGfUMqnjPiF8q7b1Y_QFAyISA&s">
+      <h3>Godaan</h3>
+      <p>Munshi Premchand</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hMVX0zVXt_OsHM6iuYV_UTC1PWe2UOtCTQ&s">
+      <h3>Kamayani</h3>
+      <p>Jaishankar Prasad</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTema8Yas1XneNpZkPkwpjNarD1b8yVc6Ex0g&s">
+      <h3>Madhushala</h3>
+      <p>Harivansh Rai Bachchan</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://www.thecivilindia.com/wp-content/uploads/2025/03/pusp_ki_abhilasa_civilindia.webp">
+      <h3>Pushp Ki Abhilasha</h3>
+      <p>Makhanlal Chaturvedi</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://cdn.exoticindia.com/images/products/original/books-2019-015/nzq210.jpg">
+      <h3>Saket</h3>
+      <p>Maithili Sharan Gupt</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81bmDNG9euS.jpg">
+      <h3>Bharat Durdasha</h3>
+      <p>Bhartendu Harishchandra</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/71-inovjD0L.jpg">
+      <h3>Chitralekha</h3>
+      <p>Bhagwati Charan Verma</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://rekhtabooks.com/cdn/shop/products/1674120057.jpg?v=1685778693">
+      <h3>75 Kavitayen</h3>
+      <p>Subhadra Kumari Chauhan</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51NCT4%2BpKIL._AC_SY200_QL15_.jpg">
+      <h3>Suraj Ka Satvan Ghoda</h3>
+      <p>Dharamvir Bharati</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/813GkVYIXcL.jpg">
+      <h3>Gunahon ka Devta</h3>
+      <p>Dharamvir Bharati</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/91GdrnoqIqL.jpg">
+      <h3>Aadha Gaon</h3>
+      <p>Rahi Masoom Raza</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/21mWBt9n5yL._AC_UF1000,1000_QL80_.jpg">
+      <h3>Tamrapatra</h3>
+      <p>Vishnu Prabhakar</p>
+      <p>₹999</p>
+      <button >Add to Cart</button>
+    </div>
+  </div> 
+  <script>
+    function searchBooks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const books = document.querySelectorAll('.book');
+
+      books.forEach(book => {
+        const title = book.querySelector('h3').textContent.toLowerCase();
+        const author = book.querySelector('p').textContent.toLowerCase();
+        if (title.includes(input) || author.includes(input)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    }
+  </script> <footer>
+  </footer>
+</body>
+</html>
