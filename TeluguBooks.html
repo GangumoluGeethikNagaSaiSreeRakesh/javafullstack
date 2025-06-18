@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Bookstore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: green;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    header img {
+        float: left;
+    }
+    nav {
+      margin: 10px 0;
+      color: red;
+      text-align: center;
+    }
+    nav a {
+      margin:35px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .book {
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    .book img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .book h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+    .book p {
+      font-size: 14px;
+      color: #555;
+    }
+    .book button {
+      background-color: #27ae60;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #2c3e50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+  .search-bar button {
+    padding: 8px 12px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="">
+    <h1>Welcome to Online Bookstore</h1>
+  </header>  <nav>
+    <a href="website3.html">Home</a>
+    <a href="TeluguBooks.html">TeluguBooks</a>
+    <a href="EnglishBooks.html">EnglishBooks</a>
+    <a href="HindiBooks.html">HindiBooks</a>
+    <a href="MalayalamBooks.html">MalayalamBooks</a>
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+    <a href="checkout.html">Checkout</a>
+    <div class="search-bar">
+       <input type="text" id="searchInput" placeholder="Search books..." />
+       <button onclick="searchBooks()">🔍</button>
+    </div>
+  </nav>  <div class="container">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51oJdLkN8PL._SY425_.jpg">
+      <h3>Mahaprasthanam</h3>
+      <p>Sri Sri Srirangam Srinivasrao</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/51kcvsUE+uL._SY445_SX342_.jpg">
+      <h3>Kanyasulkan</h3>
+      <p>Gurajada Apparao</p>
+      <p>₹349</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81nmoaZPZRL._AC_UF1000,1000_QL80_DpWeblab_.jpg">
+      <h3>Veyi Padagalu</h3>
+      <p>Viswanatha Satyanarayana</p>
+      <p>₹849</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYcHk1mQPXGbNRPxVR-RC3eqMTrSQzEe_AA&s">
+      <h3>Amuktamalyada</h3>
+      <p>Sri Krishnadevaraya</p>
+      <p>₹269</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3107E4ufxDgx8ypNTpio3EMx9OEzKoyvO5w&s">
+      <h3>Budugu</h3>
+      <p>Mullapudi Venkata Ramana</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeEklxzauBQX0JqFN3-LOZH0WbCJS1zlzrjg&s">
+      <h3>Chitti Chilakamma Kathalu</h3>
+      <p>Bapu-Ramana</p>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt5Fw1rbUTYPofsDxo0m7Z6uKAaBNJjL6iaA&s">
+      <h3>Ramayanam</h3>
+      <p>Valmiki</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1322420506i/13117833.jpg">
+      <h3>Maidanam</h3>
+      <p>Gudipati Venkatachalam</p>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5aQUmiyXQR13ON0HAPChm8XMwUjj2Q7IOJA&s">
+      <h3>Varnachitram</h3>
+      <p>Malladi Venkata Krishna Murthy</p>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAbs8pc2J-OK20wmXJg-7X9J0MAchqMmHww&s">
+      <h3>Mahabharata</h3>
+      <p>Ved Vyasa</p>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2021/12/SO/OO/JO/12594548/front-cover-300.jpg">
+      <h3>An Untold Epic Of Ayyappan</h3>
+      <p>Vinod Narayanan</p>
+      <p>₹990</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="book">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmF8oL283FW4GiFYvP5TDcCYfF4h7NFjIFJg&s">
+      <h3>Bhagavad Gita</h3>
+      <p>Ved Vyasa</p>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+  </div> 
+  <script>
+    function searchBooks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const books = document.querySelectorAll('.book');
+
+      books.forEach(book => {
+        const title = book.querySelector('h3').textContent.toLowerCase();
+        const author = book.querySelector('p').textContent.toLowerCase();
+
+        if (title.includes(input) || author.includes(input)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    }
+  </script> <footer>
+  </footer>
+</body>
+</html>
